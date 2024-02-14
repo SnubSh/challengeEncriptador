@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="assets/icon.png"/>
+  <title>Challenge Encriptador</title>
+</head>
+<body>
+  <header>
+    <h1>Challenge Encriptador de texto</h1>
+  </header>
+  <main>
+    <div class="cont-row">
+      <div class="cont-ta-la">
+        <div class="img-align">
+          <img src="assets/img-1.png">
+        </div>
+        <div class="alert">
+          <p id="msg-alert-c"></p>
+        </div>
+        <div class="cont-ta">
+          <textarea class="text-a" placeholder="Ingrese sus texto a cifrar" id="text-a-cif" rows="2", cols="10"></textarea>
+          <div class="text-view-style">
+            <p id="text-view-cif"></p>
+            <div id="copy-text-cif">
+              <button class="btn-copy" onclick="copyText('#text-view-cif')">
+                <img class="img-copy" src="assets/copy.png" alt="Icono Copiar">
+              </button>
+            </div>
+          </div>
+        </div>
+        <button id="btn-clear-cif" class="btn-clear" onclick="clearText('text-a-cif', 'btn-clear-cif', '#text-view-cif', 'copy-text-cif');">Limpiar</button>
+      </div>
+      <div class="cont-ta-la">
+        <div class="img-align">
+          <img src="assets/img-2.png">
+        </div>
+        <div class="alert">
+          <p id="msg-alert-d"></p>
+        </div>
+        <div class="cont-ta">
+          <textarea class="text-a" placeholder="Ingrese sus texto a descifrar" id="text-a-descif" rows="2", cols="10"></textarea>
+          <div class="text-view-style">
+            <p id="text-view-descif"></p>
+            <div id="copy-text-descif">
+              <button class="btn-copy" onclick="copyText('#text-view-descif')">
+                <img class="img-copy" src="assets/copy.png" alt="Icono Copiar">
+              </button>
+            </div>
+          </div>
+        </div>
+        <button id="btn-clear-descif" class="btn-clear" onclick="clearText('text-a-descif', 'btn-clear-descif', '#text-view-descif', 'copy-text-descif');">Limpiar</button>
+      </div>
+    </div>
+    <div class="cont-btn">
+      <button class="btn" onclick="textEncrypter();">Cifrar</button>
+      <button id="btn-decrypt" class="btn" onclick="textDecrypter();">Descifrar</button>
+    </div>
+  </main>
+  <script src="crypt.js"></script>
+  <footer>
+    <p>&copy Bulmaro de la Cruz - 2024</p>
+  </footer>
+</body>
+</html>
